@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Main from './Main';
+import Login from './Login';
+import Header from './Header';
+import Phonebook from './Phonebook';
+import Message from './Message';
+import Blacklist from './Blacklist';
+import Mystyle from './Mystyle';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes>
+        <Route path='/' element={<Main></Main>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/header' element={<Header></Header>}>
+          <Route path='/header/phonebook' element={<Phonebook></Phonebook>}></Route>
+          <Route path='/header/message' element={<Message></Message>}></Route>
+          <Route path='/header/blacklist' element={<Blacklist></Blacklist>}></Route>
+          <Route path='/header/mystyle' element={<Mystyle></Mystyle>}></Route>
+        </Route>
+      </Routes>
   );
 }
 
