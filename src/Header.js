@@ -16,12 +16,19 @@ export default function Header() {
                     <Link to='/header/mystyle'>내 스타일</Link>&nbsp;&nbsp;
                 </div>
                 <div>
-                    {login ? <><span>{login.name}님</span><button onClick={(e)=>{
-                        dispatch(logout(login.userId));
-                    }}>로그아웃</button></> : <Link to='/login'>Log-in</Link>}
+                    {login ? 
+                    <><span>{login.name}님</span><button onClick={(e)=>{
+                        if(!login){
+                            return;
+                        }else{
+                            dispatch(logout(login.userId));
+                        }
+                    }}>로그아웃</button></> 
+                    
+                    : <Link to='/login'>Log-in</Link>}
                 </div>
             </div>
-            <Outlet userId={login.userId}></Outlet>
+            <Outlet></Outlet>
         </>
     )
 }

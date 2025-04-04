@@ -4,11 +4,23 @@ const MHSlice = createSlice({
     name: "MH",
     initialState: {
         users: [
-            { userId: "hyun", password: "1234", name: "최현범", contact: "01086648729", login: false, contacts: [], userStyle: [] },
-            { userId: "sihyun", password: "1234", name: "박시현", contact: "01012345678", login: false, contacts: [], userStyle: [] },
-            { userId: "changhyun", password: "1234", name: "지창현", contact: "01012345678", login: false, contacts: [], userStyle: [] },
-            { userId: "saeryeong", password: "1234", name: "장세령", contact: "01012345678", login: false, contacts: [], userStyle: [] },
+            { userId: "hyun", password: "1234", name: "최현범", contact: "01086648729", login: false, contacts: [], userStyle: []},
+            { userId: "sihyun", password: "1234", name: "박시현", contact: "01012345678", login: false, contacts: [], userStyle: []},
+            { userId: "changhyun", password: "1234", name: "지창현", contact: "01012345678", login: false, contacts: [], userStyle: []},
+            { userId: "saeryeong", password: "1234", name: "장세령", contact: "01012345678", login: false, contacts: [], userStyle: []},
         ],
+    //     usersPhonebook: [
+    //         {userId: "hyun", contacts: []},
+    //         {userId: "sihyun", contacts: []},
+    //         {userId: "changhyun", contacts: []},
+    //         {userId: "saeryeong", contacts: []},
+    //     ],
+    //     usersStyle: [
+    //         {userId: "hyun", userStyle: []},
+    //         {userId: "sihyun", userStyle: []},
+    //         {userId: "changhyun", userStyle: []},
+    //         {userId: "saeryeong", userStyle: []},
+    //     ],
     },
     reducers: {
         login: (state, actions) => {
@@ -40,8 +52,26 @@ const MHSlice = createSlice({
                 }
             }
         },
+        addContact:(state, actions)=>{
+            const {userId, contact} = actions.payload;
+            const userPhonebook = state.users.find(u=>u.userId===userId);
+
+            if(userPhonebook.contacts.length>0){
+                if(userPhonebook.contacts.find(c=> c.contact === contact.contact)){
+                    alert("중복된 번호입니다.");
+                    return;
+                };
+            }
+            userPhonebook.contacts.push(contact);
+            for(let i=0; i<state.users.length; i++){
+                if(state.users[i].userId === userPhonebook.userId){
+                    state.users[i] = userPhonebook;
+                    return;
+                }
+            }
+        }
     }
 });
 
-export const { login, logout } = MHSlice.actions;
+export const { login, logout, addContact } = MHSlice.actions;
 export default MHSlice;
