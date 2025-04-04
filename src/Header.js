@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { logout } from "./MHSlice";
 
 export default function Header() {
-    const login = useSelector(state=>state.MH.users.find(u=>u.login));
+    const currentUser = useSelector(state=>state.MH.currentUser);
     const dispatch = useDispatch();
     return (
         <>
@@ -16,12 +16,12 @@ export default function Header() {
                     <Link to='/header/mystyle'>내 스타일</Link>&nbsp;&nbsp;
                 </div>
                 <div>
-                    {login ? 
-                    <><span>{login.name}님</span><button onClick={(e)=>{
-                        if(!login){
+                    {currentUser ? 
+                    <><span>{currentUser.name}님</span><button onClick={(e)=>{
+                        if(!currentUser){
                             return;
                         }else{
-                            dispatch(logout(login.userId));
+                            dispatch(logout());
                         }
                     }}>로그아웃</button></> 
                     
