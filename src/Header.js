@@ -21,7 +21,7 @@ export default function Header() {
                     }}>로그아웃</button></> : <Link to='/login'>Log-in</Link>}
                 </div>
             </div>
-            <Outlet></Outlet>
+            <Outlet userId={login.userId}></Outlet>
         </>
     )
 }

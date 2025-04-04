@@ -16,21 +16,24 @@ return (
             </ul>
         </div>
         <div>
-            <form>
-                <div>
-                    <label>이름</label>
-                    <br></br>
-                    <input type="text"></input>
-                    <br></br>
-                    <label>전화번호</label>
-                    <br></br>
-                    <input type="text"></input>
-                    <br></br>
-                    <label>기타</label>
-                    <br></br>
-                    <input type="text"></input>
-                    <br></br>
-                </div>
+            <form onSubmit={(e)=>{
+                e.preventDefault();
+                const contact = {name: e.target.name.value, contact: e.target.contact.value, etc: e.target.etc.value};
+
+            }}>
+                <label>이름</label>
+                <br></br>
+                <input type="text" name="name"></input>
+                <br></br>
+                <label>전화번호</label>
+                <br></br>
+                <input type="text" name="contact"></input>
+                <br></br>
+                <label>기타</label>
+                <br></br>
+                <input type="text" name="etc"></input>
+                <br></br>
+                <button type="submit">추가</button>
             </form>
         </div>
     </>
