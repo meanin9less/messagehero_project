@@ -1,0 +1,82 @@
+header_wrap {
+    font-weight: 400;
+    font-family: 'Nanum Square', sans-serif;
+    line-height: 1.8em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #3c3c3c;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    color: #3c3c3c;
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+    font-size: 18px;
+    width: 100%;
+    height: 80px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EFEFEF;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.header .logo_section {
+    position: absolute;
+    left: 30px;
+    z-index: 5;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header .logo_section img {
+    height: 100%;
+    width: auto;
+}
+
+.header .page_title {
+    font-size: 26px;
+    position: absolute;
+    left: 130px;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+    line-height: 20px;
+    margin-top: 3px;
+    color: #b1b1b1;
+}
+
+.header .main_menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header .main_menu ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .main_menu ul li {
+    cursor: pointer;
+}
+
+.header .main_menu ul li.login_menu {
+    border-left: 1px solid #ddd;
+    padding-left: 30px;
+}
