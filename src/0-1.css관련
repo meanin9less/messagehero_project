@@ -1,0 +1,37 @@
+*웹폰트 js
+- index.html에 추가
+
+html
+복사
+편집
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- ✅ 여기 추가 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+
+    <title>React App</title>
+  </head>
+
+index.css 또는 App.css 같은 전역 스타일 파일에 추가:
+
+css
+복사
+편집
+body {
+  font-family: 'NanumSquare', sans-serif;
+}
+또는 좀 더 넓게 적용하고 싶으면:
+
+css
+복사
+편집
+* {
+  font-family: 'NanumSquare', sans-serif;
+}
+
+* css 적용 시 css파일 같이 이동
