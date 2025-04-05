@@ -39,7 +39,9 @@ const MHSlice = createSlice({
             { contact: "01012341233", fishingcount:0, spamcount:0 },
             { contact: "01012341234", fishingcount:0, spamcount:0 },
             { contact: "01012341234", fishingcount:1, spamcount:0 },
-        ]
+        ],
+        contactList:[]
+        //고친부분 없어서 넣음.
     //     usersPhonebook: [
     //         {userId: "hyun", contacts: []},
     //         {userId: "sihyun", contacts: []},
@@ -58,7 +60,10 @@ const MHSlice = createSlice({
             const { inputId, inputPw } = actions.payload;
             for(let i=0; i<state.users.length; i++){
                 if (state.users[i].userId===inputId){
-                    if(state.users[i].userPw===inputPw){
+                    if(state.users[i].password===inputPw){
+                        // 고친부분
+                        // if(state.users[i].userPw===inputPw){
+                        // if(state.users[i].password===inputPw){
                         state.currentUser = state.users[i];
                         alert("로그인하였습니다.");
                         return;
@@ -68,39 +73,61 @@ const MHSlice = createSlice({
                 return;
             }
             alert("아이디가 잘못되었습니다.");
+            // 고칠부분(뒷 배열 아이디 소지자도 이 메세지가 뜸)
+
             return;
         },
         logout: (state) => {
             state.currentUser = null;
         },
-        searchContactList:(state, actions)=>{
-            const {userId, search} = actions.payload;
-            if(search){
-                const userContacts = state.users.find(u=>u.userId === userId).contacts;
-                const filterContacts = userContacts.contact.filter(c=>c.name.include(search));
-                state.contactList = [...filterContacts.map(l=><li><p>{l.name}</p><Link to={l.contact}>{l.name}</Link></li>)];
-            }
-        },
-        addContact:(state, actions)=>{
-            const {userId, contact} = actions.payload;
-            const userPhonebook = state.users.find(u=>u.userId===userId);
+        // searchContactList:(state, actions)=>{
+        //     const {userId, search} = actions.payload;
+        //     if(search){
+        //         const userContacts = state.users.find(u=>u.userId === userId).contacts;// 배열 접근
+        //         const filterContacts = userContacts.filter(c=>c.name.includes(search));
+        //         //고친 부분(유저)
+        //         // userContacts.contact.filter(c=>c.name.include(search));
+        //         // userContacts.filter(c=>c.name.includes(search));
+        //         const filtered = user.contacts.filter(c => c.name.includes(search));
+        //         //고친 부분(없어서 그냥 넣음)
+        //         state.contactList = filtered
+        //         //고친 부분(유저)
+        //         //state.contactList = [...filterContacts.map(l=><li><p>{l.name}</p><Link to={l.contact}>{l.name}</Link></li>)];
+        //         //state.contactList = filtered
+        //     }
+        // },
+        // addContact:(state, actions)=>{
+        //     const {userId, contact} = actions.payload;
+        //     const userPhonebook = state.users.find(u=>u.userId===userId);
 
-            if(userPhonebook.contacts.length>0){
-                if(userPhonebook.contacts.find(c=> c.contact === contact.contact)){
-                    alert("중복된 번호입니다.");
-                    return;
-                };
-            }
-            userPhonebook.contacts.push(contact);
-            for(let i=0; i<state.users.length; i++){
-                if(state.users[i].userId === userPhonebook.userId){
-                    state.users[i] = userPhonebook;
-                    return;
-                }
-            }
+        //     if(userPhonebook.contacts.length>0){
+        //         if(userPhonebook.contacts.find(c=> c.contact === contact.contact)){
+        //             alert("중복된 번호입니다.");
+        //             return;
+        //         };
+        //     }
+        //     userPhonebook.contacts.push(contact);
+        //     for(let i=0; i<state.users.length; i++){
+        //         if(state.users[i].userId === userPhonebook.userId){
+        //             state.users[i] = userPhonebook;
+        //             return;
+        //         }
+        //     }
+        // }
+        //시현 리듀서 함수
+        customArrAdd:(state,actions)=>{
+            const{nextId,title,body}=actions.payload;
+            state.basicStyle= [...state.basicStyle,{id:nextId,title,body}];
+            // setArr([...arr,{ id: nextId, title, body }])
+        },
+        customArrRender: (state, action) => {
+            state.basicStyle = action.payload;
         }
+
+
+
     }
 });
 
-export const { login, logout, addContact, searchContactList } = MHSlice.actions;
+export const { login, logout, addContact, searchContactList,customArrAdd,customArrRender} = MHSlice.actions;
 export default MHSlice;

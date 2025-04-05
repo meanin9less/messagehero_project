@@ -4,10 +4,10 @@ import { Route, Routes } from 'react-router-dom';
 import Main from './Main';
 import Login from './Login';
 import Header from './Header';
-import Phonebook from './Phonebook';
+// import Phonebook from './Phonebook';
 import Message from './Message';
 import Blacklist from './Blacklist';
-import Mystyle from './Mystyle';
+import Customize from './Customize';
 
 function App() {
   return (
@@ -16,13 +16,13 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         
         <Route path='/header' element={<Header></Header>}>
-          <Route path='/header/phonebook' element={<Phonebook></Phonebook>}>
+          {/* <Route path='/header/phonebook' element={<Phonebook></Phonebook>}>
             <Route></Route>
             <Route path='/header/phonebook/:contact'></Route>
-          </Route>
+          </Route> */}
           <Route path='/header/message' element={<Message></Message>}></Route>
           <Route path='/header/blacklist' element={<Blacklist></Blacklist>}></Route>
-          <Route path='/header/mystyle' element={<Mystyle></Mystyle>}></Route>
+          <Route path='/header/customize' element={<Customize></Customize>}></Route>
         </Route>
       </Routes>
   );
