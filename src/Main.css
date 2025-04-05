@@ -1,0 +1,98 @@
+
+
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-weight: 500;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .logo {
+    width: 80px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .logo:hover {
+    transform: scale(1.05);
+  }
+
+  
+  .logo_main {
+    display: block;
+    width: 43%;
+    height: 80%;
+    margin: 0px auto;
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+  .auth-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .auth-section button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .auth-section button:hover {
+    background-color: #555;
+  }
+  
+  .login-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+  }
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  .visually-hidden {
+    display: none;
+  }
+  
+  .icon-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size:1.2em;
+  }
+  
+  .icon-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: transform 0.2s;
+  }
+  
+  .icon-box img:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-box a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  

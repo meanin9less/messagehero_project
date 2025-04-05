@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { logout } from "./MHSlice";
 import './Header.css';
 
@@ -7,12 +7,13 @@ export default function Header() {
     const currentUser = useSelector(state=>state.MH.currentUser);
     const dispatch = useDispatch();
     const link = document.createElement('link');
+    const navigate=useNavigate();
     
     return (
         <div className="header_wrap">
           <div className="header">
                 <div className="logo_section">
-                    <img src="/logo1.png" alt="히어로 그림" />
+                    <img src="/logo1.png" alt="히어로 그림" onClick={() => navigate("/")} />
                 </div>
 
                 <div className="page_title">&nbsp;&nbsp;문자 히어로!</div>

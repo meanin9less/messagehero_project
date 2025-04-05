@@ -47,6 +47,12 @@ a {
 .header .logo_section img {
     height: 100%;
     width: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.header .logo_section img:hover {
+    transform: scale(1.05);
 }
 
 .header .page_title {

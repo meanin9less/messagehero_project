@@ -3,6 +3,7 @@ import CustomAdd from "./CustomAdd";
 import CustomRead from "./CustomRead";
 import { useDispatch, useSelector } from 'react-redux';
 import { customArrAdd, customArrRender } from './MHSlice';
+import { Outlet } from 'react-router-dom';
 
 
 function App() {
@@ -133,9 +134,7 @@ function App() {
               ))}
             </ul>
           </div>
-
         </div>
-
       </div>
   );
 };
