@@ -23,6 +23,7 @@ function App() {
           <Route path='/header/message' element={<Message></Message>}></Route>
           <Route path='/header/blacklist' element={<Blacklist></Blacklist>}></Route>
           <Route path='/header/customize' element={<Customize></Customize>}>
+          <Route index element={<Footer></Footer>}></Route>
           </Route>
         </Route>
       </Routes>

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+}
+
 
 
 .main-container {
@@ -5,6 +12,8 @@
     margin: 0 auto;
     padding: 40px 20px;
     font-weight: 500;
+   
+
   }
   
   .header {
@@ -76,6 +85,7 @@
     align-items: center;
     cursor: pointer;
     font-size:1.2em;
+    font-family: 'NanumSquareRound', sans-serif !important;
   }
   
   .icon-box img {

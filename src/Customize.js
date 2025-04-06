@@ -135,6 +135,7 @@ function App() {
             </ul>
           </div>
         </div>
+        <Outlet></Outlet>
       </div>
   );
 };
