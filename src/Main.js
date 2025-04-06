@@ -5,11 +5,12 @@ import { logout } from "./MHSlice";
 import './Main.css';
 
 // 아이콘 이미지 import (assets 폴더에 파일 넣기)
-import phonebookIcon from './assets/phonebook.png';
-import messageIcon from './assets/message.png';
-import shieldIcon from './assets/shield.png';
-import templateIcon from './assets/template.png';
-import heroLogo from './assets/logo1.png';
+import phonebookIcon from './assets/img/phonebook.png';
+import messageIcon from './assets/img/message.png';
+import shieldIcon from './assets/img/shield.png';
+import templateIcon from './assets/img/template.png';
+import heroLogo from './assets/img/logo1.png';
+import heroLogo2 from './assets/img/logo2.png';
 
 export default function Main() {
     const dispatch = useDispatch();
@@ -39,7 +40,7 @@ export default function Main() {
 
             <h1 className="visually-hidden">문자히어로</h1>
             <img
-                    src="/logo2.png"
+                    src={heroLogo2}
                     className="logo_main"
                 />
 

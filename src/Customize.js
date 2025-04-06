@@ -6,7 +6,7 @@ import { customArrAdd, customArrRender } from './MHSlice';
 import { Outlet } from 'react-router-dom';
 
 
-function App() {
+export default function Customize() {
   const arr=useSelector(state=>state.MH.basicStyle);
   const dispatch=useDispatch();
   // 리덕스로 상태값 변경 시작
@@ -139,4 +139,3 @@ function App() {
       </div>
   );
 };
-export default App;
