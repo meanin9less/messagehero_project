@@ -126,15 +126,7 @@
     background-color: #f8f9fa;
 }
 
-/* Footer 스타일 */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-top: 1px solid #dadce0;
-    width: 100%;
-    margin-top: 40px;
-}
+
 
 .company_info {
     /* 추가적인 스타일이 필요하면 여기에 정의 */
