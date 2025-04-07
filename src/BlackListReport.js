@@ -41,7 +41,7 @@ export default function BlackListReport() {
                         name="inputContact" 
                         id="inputContact" 
                         value={inputContact} 
-                        onChange={(e) => setInputContact(e.target.value)} 
+                        onChange={(e) => setInputContact(e.target.value.replace(/[^0-9]/g, ""))} 
                         placeholder="전화번호를 입력하세요"
                         required
                     />

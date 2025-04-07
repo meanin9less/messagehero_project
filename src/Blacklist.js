@@ -28,7 +28,7 @@ export default function Blacklist() {
                                 className="search"
                                 type="text"
                                 value={inputContact}
-                                onChange={(e) => setInputContact(e.target.value)}
+                                onChange={(e) => setInputContact(e.target.value.replace(/[^0-9]/g, ""))}
                                 placeholder="번호를 입력하세요"
                             />
                             <button className="search-bt" type="submit">검색</button>

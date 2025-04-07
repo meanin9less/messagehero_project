@@ -43,7 +43,7 @@ export default function UpdateContact() {
           <input 
             type="text" 
             value={contact} 
-            onChange={(e) => setContact(e.target.value)} 
+            onChange={(e) => setContact(e.target.value.replace(/[^0-9]/g, ""))}
           />
           <label>기타</label>
           <input 
