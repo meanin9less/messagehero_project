@@ -21,13 +21,13 @@ export default function Blacklist() {
                         alert("번호를 입력해주세요");
                         return;
                     }
-                    navigate(`/header/blacklist/${inputContact}`);
+                    navigate(`/main/blacklist/${inputContact}`);
                     setInputContact(e.target.value);
                 }}>검색</button>
                 </form>
             </div>
             <div>
-                <Link to="/header/blacklist/blackListreport">유해번호 신고하기!</Link>
+                <Link to="/main/blacklist/blackListreport">유해번호 신고하기!</Link>
             </div>
             <Outlet></Outlet>
             <div>

@@ -6,7 +6,7 @@ const MHSlice = createSlice({
     initialState: {
         users: [
             {
-                userId: "hyun", password: "1234", name: "최현범", contact: "01086648729", add: 0, contacts: [
+                userId: "hyun", password: "1234", name: "최현범", contact: "01086648729", contacts: [
                     { name: "박시현", contact: "01012341231", etc: "프로젝트" },
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
@@ -82,8 +82,12 @@ const MHSlice = createSlice({
         logout: (state) => {
             state.users.map(u => u.userId === state.currentUser.userId ? state.currentUser : u);
             state.currentUser = null;
+        },    
+        signUp: (state,actions) =>{
+        const { inputId, inputPw, inputName, inputNumber}= actions.payload;
+        state.users.push({userId: inputId, password: inputPw, name: inputName, contact: inputNumber, contacts:[]});
         },
-        ////// 로그인 로그아웃 끝//////
+        ////// 로그인 로그아웃 회원가입 끝//////
         ////// 연락처 검색, 추가, 수정, 삭제 시작////////
         searchContactList: (state, actions) => {
             const { userId, search } = actions.payload;
@@ -186,7 +190,7 @@ const MHSlice = createSlice({
     }
 });
 
-export const { login, logout, //로그인
+export const { login, logout, signUp, //회원관련
             addContact, searchContactList, updateContact, deleteContact, //연락처
             customAdd, customUpdate, customDelete, //사용자정의 서식
             addBlackList, //블랙리스트 추가

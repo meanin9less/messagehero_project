@@ -25,7 +25,7 @@ return (
         
         alert("신고되었습니다.");
         dispatch(addBlackList({inputContact, fishing, spam}));
-        navigate("/header/blacklist");
+        navigate("/main/blacklist");
     }}>
         <div>
             <label>신고 번호</label>

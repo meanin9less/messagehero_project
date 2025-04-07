@@ -72,7 +72,7 @@ function Customize() {
         <ul>
           {currentUser ? 
             userStyle.length === 0 ? <p>스타일을 추가해주세요.</p> :
-            userStyle.map(s=> <><li><Link to={"/header/customize/update/"+s.title}>{s.title}</Link></li></>)
+            userStyle.map(s=> <><li><Link to={"/main/customize/update/"+s.title}>{s.title}</Link></li></>)
              : <p>로그인 후 이용하세요.</p>}
         </ul>
       </div>

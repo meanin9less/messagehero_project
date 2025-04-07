@@ -63,11 +63,11 @@ export default function UpdateContact() {
                 return;
             }
             dispatch(updateContact({ currentContactNum, name, contact, etc}));
-            navigate("/header/phonebook");
+            navigate("/main/phonebook");
           }}>수정</button>
           <button onClick={(e)=>{
             dispatch(deleteContact(currentContactNum));
-            navigate("/header/phonebook");
+            navigate("/main/phonebook");
           }}>삭제</button>
         </form>
       ) : (

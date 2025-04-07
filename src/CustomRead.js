@@ -89,12 +89,12 @@ export default function CutomRead() {
         <button type="submit" style={styles.button} onClick={(e) => {
           e.preventDefault();
           dispatch(customUpdate({styleTitle, title, body}));
-          navigate("/header/customize");
+          navigate("/main/customize");
         }}>수정</button>
         <button type="submit" style={styles.button} onClick={(e) => {
           e.preventDefault();
           dispatch(customDelete(styleTitle));
-          navigate("/header/customize");
+          navigate("/main/customize");
         }}>삭제</button>
       </form>
     </>
