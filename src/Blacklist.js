@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import'./a/a/blacklist.css';
+import'./assets/css/blacklist.css';
 
 export default function Blacklist() {
     const navigate = useNavigate();
