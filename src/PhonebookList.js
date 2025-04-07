@@ -18,7 +18,7 @@ export default function PhonebookList() {
           <input
             type="text"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => {setSearchTerm(e.target.value);}}
           />
         ) : (
           <input type="text" placeholder="로그인 후 이용하세요." />
