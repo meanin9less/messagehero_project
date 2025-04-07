@@ -1,0 +1,43 @@
+.custom-form {
+  width: 100%;
+}
+
+.custom-input {
+  display: block;
+  width: 96%;
+  padding: 10px;
+  margin: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.custom-textarea {
+  display: block;
+  width: 96%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.custom-button-group {
+  display: flex;
+  gap: 10px; /* 버튼 사이 간격 */
+  margin-top: 10px;
+}
+
+.custom-button {
+  padding: 10px 20px;
+  background-color: #888585;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.style-item:empty {
+  display: none;
+}
+

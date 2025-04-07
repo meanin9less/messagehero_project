@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.main_container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  width: 80px;
+  /* cursor: pointer; */
+  /* transition: transform 0.3s; */
+}
+
+/* .logo:hover {
+  transform: scale(1.05);
+} */
+
+.logo_main {
+  display: block;
+  width: 43%;
+  height: 80%;
+  margin: 0px auto;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.auth_section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth_section button {
+  background-color: #8b8888;
+  color: #fff;
+  font-weight: bolder;  
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+} 
+.auth_section button:hover {
+  background-color: #555;
+}
+
+.login_link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;
+}
+.login_link:hover {
+  text-decoration: underline;
+}
+
+.visually_hidden {
+  display: none;
+}
+
+.icon_section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.icon_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-family: 'NanumSquareRound', sans-serif !important;
+}
+
+.icon_box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  transition: transform 0.2s;
+}
+
+.icon_box img:hover {
+  transform: scale(1.1);
+}
+
+.icon_box a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* .login_bt{
+  width: 70px;
+  height: 35px;
+  background-color: #003349;
+  color: white;
+} */
