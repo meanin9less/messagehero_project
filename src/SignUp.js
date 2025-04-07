@@ -34,15 +34,9 @@ export default function SignUp() {
                 }}>
                     <div className="formDiv">
                         <div>
-                        <label className="formLabel" style={{ display:"block" ,width:"100%"}}>아이디</label>
+                            <label className="formLabel" style={{ display: "block", width: "100%" }}>아이디</label>
                         </div>
-                        <input
-                            type="text"
-                            name="inputId"
-                            value={inputId}
-                            onChange={(e) => setInputId(e.target.value)}
-                            className="formInputId"
-                        />
+                        <input type="text" name="inputId" value={inputId} onChange={(e) => setInputId(e.target.value)} className="formInputId"/>
                         <button className="checkButton" onClick={(e) => {
                             e.preventDefault();
                             if (users.find(u => u.userId === inputId)) {
@@ -54,7 +48,7 @@ export default function SignUp() {
                     </div>
                     <div className="formDiv">
                         <label className="formLabel">비밀번호</label>
-                        <input type="password" name="inputPw" className="formInput" />
+                        <input type="password" name="inputPw" className="formInput"/>
                     </div>
                     <div className="formDiv">
                         <label className="formLabel">이름</label>
@@ -62,13 +56,10 @@ export default function SignUp() {
                     </div>
                     <div className="formDiv">
                         <div>
-                        <label className="formLabel"  style={{ display:"block" ,width:"100%"}}>전화번호</label>
+                            <label className="formLabel" style={{ display: "block", width: "100%" }}>전화번호</label>
                         </div>
-                        <input
-                            type="text"
-                            name="inputNumber"
-                            value={inputNumber}
-                            onChange={(e) => setInputNumber(e.target.value)}
+                        <input type="text" name="inputNumber" value={inputNumber}
+                            onChange={(e) => setInputNumber(e.target.value.replace(/[^0-9]/g, ""))}
                             className="formInputNumber"
                         />
                         <button className="checkButton" onClick={(e) => {
