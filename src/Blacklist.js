@@ -10,6 +10,9 @@ export default function Blacklist() {
                 <h3>유해번호조회</h3>
             </div>
             <div>
+                <form onClick={(e=>{
+                    e.preventDefault();
+                })}>
                 <input type="text" value={inputContact} onChange={(e) => {
                     setInputContact(e.target.value);
                 }}></input>
@@ -19,7 +22,9 @@ export default function Blacklist() {
                         return;
                     }
                     navigate(`/header/blacklist/${inputContact}`);
+                    setInputContact(e.target.value);
                 }}>검색</button>
+                </form>
             </div>
             <div>
                 <Link to="/header/blacklist/blackListreport">유해번호 신고하기!</Link>
