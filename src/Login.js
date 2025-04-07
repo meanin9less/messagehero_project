@@ -13,10 +13,8 @@ export default function Login() {
                     e.preventDefault();
                     const inputId = e.target.inputid.value;
                     const inputPw = e.target.inputpw.value;
-                    dispatch(login( {inputId, inputPw}));
-
+                    dispatch(login({inputId, inputPw}));
                     navigate("/");
-
                 }}>
                     <div>
                         <label>아이디</label>
