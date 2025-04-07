@@ -5,11 +5,16 @@
   font-style: normal;
 }
 
+
 .main_container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
   font-weight: 500;
+}
+
+label{
+  margin:0px;
 }
 
 .header {
