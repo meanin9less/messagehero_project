@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import "./assets/css/Message.css"
+
 
 export default function Message() {
   const currentUser = useSelector(state => state.MH.currentUser);
@@ -33,24 +35,29 @@ export default function Message() {
 
   return (
     <>
-      {currentUser ? (
-        <div>
-          <div>
+    {currentUser ? (
+      <div className="layout_container">
+        {/* 왼쪽 영역: 메시지 작성 + 서식 */}
+        <div className="layout_left">
+          <div className="editor_box">
             <h3>문자메세지</h3>
             <textarea
+              className="form_message_textarea"
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               placeholder="메시지를 입력하세요"
             />
           </div>
+  
           <div>
             <h3>서식</h3>
-            <div>
+            <div className="editor_box2">
               {currentStyle.length === 0 ? (
                 <p>서식이 없습니다.</p>
               ) : (
-                currentStyle.map(s => (
+                currentStyle.map((s) => (
                   <div
+                    className="list_template_item"
                     key={s.title}
                     onClick={() => setInputMessage(s.body)}
                   >
@@ -61,15 +68,20 @@ export default function Message() {
               )}
             </div>
           </div>
-          <div>
+        </div>
+  
+        {/* 오른쪽 영역: 연락처 + 수신자 목록 */}
+        <div className="layout_right">
+          <div className="contact_box">
             <h3>연락처</h3>
             <ul>
-              {contactList.map(c => (
+              {contactList.map((c) => (
                 <li key={c.contact}>
                   {c.name}
                   <button
+                    className="recipient_add_bt"
                     onClick={() => {
-                      if (!recipientList.some(r => r.contact === c.contact)) {
+                      if (!recipientList.some((r) => r.contact === c.contact)) {
                         setRecipientList([...recipientList, c]);
                       }
                     }}
@@ -79,16 +91,20 @@ export default function Message() {
                 </li>
               ))}
             </ul>
+  
             <h3>수신자 목록</h3>
             <ul>
               {recipientList.length > 0 ? (
-                recipientList.map(r => (
+                recipientList.map((r) => (
                   <li key={r.contact}>
                     {r.name}
                     <button
-                      onClick={() => {
-                        setRecipientList(recipientList.filter(rec => rec.contact !== r.contact));
-                      }}
+                      className="action_remove_bt"
+                      onClick={() =>
+                        setRecipientList(
+                          recipientList.filter((rec) => rec.contact !== r.contact)
+                        )
+                      }
                     >
                       제외
                     </button>
@@ -98,34 +114,52 @@ export default function Message() {
                 <p>수신자 없음</p>
               )}
             </ul>
-            <button onClick={handleSend}>전송</button>
+  
+            <button className="action_send_bt" onClick={handleSend}>
+              전송
+            </button>
           </div>
         </div>
-      ) : (
-        <div>
-          <div>
+      </div>
+    ) : (
+      <div className="layout_container">
+        <div className="layout_left">
+          <div className="editor_box">
             <h3>문자메세지</h3>
-            <textarea disabled placeholder="로그인 후 이용하세요" />
+            <textarea
+              className="form_message_textarea"
+              disabled
+              placeholder="로그인 후 이용하세요."
+            />
           </div>
+  
           <div>
             <h3>서식</h3>
-            <div>
-              <p>로그인 후 이용하세요</p>
+            <div className="editor_box2">
+              <p>로그인 후 이용하세요.</p>
             </div>
           </div>
-          <div>
+        </div>
+  
+        <div className="layout_right">
+          <div className="contact_box">
             <h3>연락처</h3>
-            <ul>
-              <p>로그인 후 이용하세요.</p>
-            </ul>
+            <p>로그인 후 이용하세요.</p>
+  
             <h3>수신자 목록</h3>
-            <ul>
-              <p>로그인 후 이용하세요.</p>
-            </ul>
-            <button onClick={() => alert("로그인 후 이용하세요.")}>전송</button>
+            <p>로그인 후 이용하세요.</p>
+  
+            <button
+              className="action_send_bt"
+              onClick={() => alert("로그인 후 이용하세요.")}
+            >
+              전송
+            </button>
           </div>
         </div>
-      )}
-    </>
+      </div>
+    )}
+  </>
+  
   );
 }
