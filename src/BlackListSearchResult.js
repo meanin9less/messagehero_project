@@ -11,7 +11,7 @@ export default function BlackListSearchResult(){
         : <p>{searchedcontact} 이 번호는 신고 이력이 없는 번호입니다.</p>;
     return(
         <>
-            <div>
+            <div class="outlet">
                 {result}
             </div>
         </>

@@ -1,0 +1,246 @@
+/*----------------------blacklist----------------------*/
+
+.likebody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* 화면의 세로 길이 전체를 사용 */
+}
+
+.blacklist {
+    width: 100%;
+    max-width: 1000px; /* 최대 너비 설정 */
+    padding: 30px;
+    text-align: center;
+    border: solid 3px #bfbfbf;
+    border-radius: 10px; 
+    background-color: #f5f5f5; /* 배경 색상 추가 */
+}
+
+.findhzd {
+    color: #003349;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.search {
+    width: 100%; /* 검색창의 너비를 100%로 설정 */
+    max-width: 400px;  /* 최대 너비 400px */
+    height: 20px;
+    padding: 10px;
+    border: solid 2px #bfbfbf;  
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.search-bt {
+    width: 90px;
+    height: 43px;
+    background-color: #003349;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bt:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
+}
+
+.search-bt:active {
+    background-color: #002b38;
+    transform: scale(0.98);
+}
+
+/*----------------------Blacklist Report Form----------------------*/
+
+/* 전체 신고 폼 스타일 */
+.blacklist-report-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* 폼 그룹 스타일 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* 신고 번호 입력란 스타일 */
+.input-contact {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-contact:focus {
+    border: 1px solid #003349;
+}
+
+/* 체크박스 그룹 스타일 */
+.checkbox-group {
+    margin-top: 10px;
+}
+
+/* 체크박스 스타일 */
+.checkbox-input {
+    margin-right: 10px;
+}
+
+/* 폼 레이블 스타일 */
+.form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #003349;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* 신고 유형 제목 */
+.report-type-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #003349;
+}
+
+/* 버튼 스타일 */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #003349;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005f73;
+}
+
+.submit-button:active {
+    background-color: #002b38;
+}
+
+/* 폼 내 텍스트 스타일 */
+span, label {
+    margin-bottom: 12px;
+}
+
+/* 레이블 및 입력 간격 */
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+/*----------------------유해번호 신고하기 링크 스타일----------------------*/
+/* 유해번호 신고하기 링크 스타일 */
+.report-link {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #003349;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.report-link:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
+}
+
+.report-link:active {
+    background-color: #002b38;
+    transform: scale(0.98);
+}
+
+/* outlet 안에 박스를 만들어서 보여주는 곳 */
+.outlet {
+   
+    width: 100%; /* outlet의 너비를 100%로 설정하여 화면 크기에 맞게 조정 */
+    max-width: 800px; /* outlet의 최대 너비를 800px로 설정 */
+    margin: 20px auto; /* 가운데 정렬 */
+    padding: 20px; /* 여백 추가 */
+    background-color: #ffffff; /* 배경 색상 */
+    border: 2px solid #bfbfbf; /* 테두리 색상 */
+    border-radius: 10px; /* 둥근 모서리 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    font-size: 16px; /* 글자 크기 */
+    color: #003349; /* 텍스트 색상 */
+    transition: all 0.3s ease;
+    overflow: hidden; /* 내부 내용이 바깥으로 나가지 않도록 처리 */
+}
+
+.five{
+   
+    width: 100%; /* outlet의 너비를 100%로 설정하여 화면 크기에 맞게 조정 */
+    max-width: 800px; /* outlet의 최대 너비를 800px로 설정 */
+    margin: 20px auto; /* 가운데 정렬 */
+    padding: 20px; /* 여백 추가 */
+    background-color: #ffffff; /* 배경 색상 */
+    border: 2px solid #bfbfbf; /* 테두리 색상 */
+    border-radius: 10px; /* 둥근 모서리 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    font-size: 16px; /* 글자 크기 */
+    color: #003349; /* 텍스트 색상 */
+    transition: all 0.3s ease;
+    overflow: hidden; /* 내부 내용이 바깥으로 나가지 않도록 처리 */
+}
+
+/*----------------------UL 스타일 (리스트의 불릿 제거)----------------------*/
+ul {
+    list-style-type: none; /* 동그라미(불릿)를 제거 */
+    padding: 0;
+}
+
+ul li {
+    padding-left: 0;
+    font-size: 16px;
+    color: #003349;
+    line-height: 1.5;
+}
+
+/* 글자 정열*/
+.prevention-list{
+    width: 60%;
+    margin: auto;
+    text-align: left;
+}
+
+.prevention-title{
+    
+    font-size: x-large;
+    padding-bottom: 10PX ;
+
+
+}
+
+.prevention-list>li{
+    list-style-type: decimal;
+    padding-top: 10PX;
+    
+}
+
+
