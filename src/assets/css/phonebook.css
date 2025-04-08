@@ -132,7 +132,7 @@
 /* =========================
    버튼 스타일
    ========================= */
-button {
+.button {
     padding: 12px 20px; /* 버튼 안의 텍스트와 테두리 사이에 여백 */
     font-size: 16px; /* 버튼 글자 크기 */
     background-color: #003349; /* 파란색 배경 */
@@ -144,7 +144,7 @@ button {
     margin-top: 10px; /* 버튼 상단 여백 */
 }
 
-button:hover {
+.button:hover {
     background-color: #003349; /* 마우스를 올리면 버튼 배경색 변경 */
 }
 

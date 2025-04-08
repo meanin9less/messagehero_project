@@ -80,8 +80,8 @@ export default function UpdateContact() {
                         <label>기타</label>
                         <input type="text" />
                     </div>
-                    <button onClick={() => alert("로그인 후 이용하세요.")}>수정</button>
-                    <button onClick={() => alert("로그인 후 이용하세요.")}>삭제</button>
+                    <button class="button" onClick={() => alert("로그인 후 이용하세요.")}>수정</button>
+                    <button class="button" onClick={() => alert("로그인 후 이용하세요.")}>삭제</button>
                 </form>
             )}
             </div>

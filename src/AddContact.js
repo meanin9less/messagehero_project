@@ -47,7 +47,7 @@ export default function AddContact() {
                     <label>기타</label>
                     <input type="text" name="etc" />
                 </div>
-                <button type="submit">추가</button>
+                <button class="button" type="submit">추가</button>
             </form>
         </div>
     );
