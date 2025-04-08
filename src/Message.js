@@ -115,7 +115,7 @@ export default function Message() {
               )}
             </ul>
   
-            <button className="message_add_bt" onClick={handleSend}>
+            <button className="message_send_bt" onClick={handleSend}>
               전송
             </button>
           </div>
@@ -150,7 +150,7 @@ export default function Message() {
             <p>로그인 후 이용하세요.</p>
   
             <button
-              className="message_add_bt"
+              className="message_send_bt"
               onClick={() => alert("로그인 후 이용하세요.")}
             >
               전송

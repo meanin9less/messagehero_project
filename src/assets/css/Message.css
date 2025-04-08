@@ -95,6 +95,7 @@
   .message_add_bt{
     background-color: #ffffff;
     color: #000000;
+    margin-left: 5px;
     padding: 2px 4px;
     font-size: 14px;
     cursor: pointer;
@@ -105,6 +106,7 @@
     background-color: #ffffff;
     color: #ff0000;
     border: 1px solid;
+    margin-left: 5px;
     padding: 2px 4px;
     font-size: 14px;
     cursor: pointer;
