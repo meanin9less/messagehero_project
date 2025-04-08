@@ -33,7 +33,7 @@ export default function PhonebookList() {
                         filteredList.map(c => (
                             <li key={c.contact} className="contact-item">
                                 <p>{c.name}</p>
-                                < Link className="contact-link" to={`/contact/${c.contact}`} >{c.name}</Link>
+                                < Link className="contact-link" to={`${c.contact}`} >{c.name}</Link>
                             </li>
                         ))
                     ) : (

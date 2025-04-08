@@ -30,6 +30,7 @@ export default function UpdateContact() {
 
     return (
         <>
+        <div className="add-contact">
             <h4 className="title">연락처 수정</h4>
             {currentUser ? (
                 <form onSubmit={(e) => e.preventDefault()}>
@@ -82,6 +83,7 @@ export default function UpdateContact() {
                     <button onClick={() => alert("로그인 후 이용하세요.")}>삭제</button>
                 </form>
             )}
+            </div>
         </>
     );
 }
