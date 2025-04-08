@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { customDelete, customUpdate } from "./MHSlice";
 import './assets/css/CustomRead.css'; 
 
-export default function CustomRead() {
+export default function CustomRead(props) {
   const { styleTitle } = useParams();
   const currentUser = useSelector(state => state.MH.currentUser);
   const dispatch = useDispatch();
