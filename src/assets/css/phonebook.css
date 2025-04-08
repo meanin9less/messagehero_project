@@ -71,8 +71,13 @@
     overflow-y: scroll;/* 스크롤*/
     width: 500px; /* 넓이*/
     max-height: 400px;/* 최대 길이*/
+   
 }
 
+.contact-list li{
+   
+    cursor: pointer;
+}
 .contact-item {
     padding: 15px; /* 각 항목에 내부 여백 */
     border-bottom: 1px solid #ccc; /* 항목들 사이에 구분선 추가 */
@@ -96,6 +101,16 @@
 
 .uselogin{
     text-align: center  ;
+}
+
+.list-name{
+    font-size: large;
+    font-weight: 550;
+    margin-left: 5px;
+}
+
+.list-etc{
+    padding: 10px;
 }
 
 /* =========================

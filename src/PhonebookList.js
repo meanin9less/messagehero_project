@@ -35,8 +35,8 @@ export default function PhonebookList() {
                             <li onClick={()=>{
                                 navigate(`/Main/phonebook/${c.contact}`);
                             }} key={c.contact} className="contact-item">
-                                <span>{c.name}</span>
-                                <span>{c.etc}</span>
+                                <span class="list-name">{c.name}</span>
+                                <span class="list-etc">-{c.etc}</span>
                             </li>
                         )
                     ) : (
