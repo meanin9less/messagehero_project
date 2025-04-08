@@ -45,7 +45,8 @@ export default function Message() {
           {/* 왼쪽 영역: 메시지 작성 + 서식 */}
           <div className="message_left">
             <div className="message_box">
-              <h3>문자메세지</h3>
+              <div class="box-message">
+              <h3 class="message">문자메세지</h3>
               <textarea
                 className="message_textarea"
                 value={inputMessage}
@@ -53,6 +54,7 @@ export default function Message() {
                 placeholder="메시지를 입력하세요"
               />
               <p>{inputMessage.length > 45 ? getByteLength(inputMessage) + "Byte LMS" : getByteLength(inputMessage) + "Byte SMS"}</p>
+              </div>
             </div>
 
             <div class="message-write">
@@ -136,8 +138,8 @@ export default function Message() {
         <div className="message_container">
           <div className="message_left">
             <div className="message_box">
-              <div class="call-list">
-              <h3>문자메세지</h3>
+              <div class="message-state">
+              <h3 class="message">문자메세지</h3>
               <textarea
                 className="message_textarea"
                 disabled
@@ -147,7 +149,7 @@ export default function Message() {
             </div>
 
             <div class="message-write">
-              <h3>서식</h3>
+              <h3 class="write">서식</h3>
               <div className="message_box2">
                 <p>로그인 후 이용하세요.</p>
               </div>
@@ -156,12 +158,12 @@ export default function Message() {
 
           <div className="message_right">
             <div className="message_box">
-              <div class="call-list">
-                <h3>연락처</h3>
+              <div class="call-list1">
+                <h3 class="list">연락처</h3>
                 <p>로그인 후 이용하세요.</p>
               </div>
-              <div class="returncall">
-                <h3>수신자 목록</h3>
+              <div class="returncall1">
+                <h3 class="call">수신자 목록</h3>
                 <p>로그인 후 이용하세요.</p>
              
               <button
@@ -179,3 +181,4 @@ export default function Message() {
 
   );
 }
+

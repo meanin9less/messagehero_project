@@ -29,18 +29,28 @@
   }
 
 /* 메시지 입력 영역 */
+.message-state{
+  text-align: center;
+  border:  solid 3px #003349;
+}
+.message{
+  color:#003349 ;
+}
 
+.box-message{
+  text-align: center;
+
+  border: solid 3px #003349;
+  margin-top: 10px;
+  
+}
 
   .message_box {
     
     flex: 1;
-    margin-bottom: 24px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-   
-   
   }
   .message_phonebox{
     flex: 1;
@@ -85,9 +95,15 @@
   }
   
   /* 서식 항목 스타일 */
+  .write{
+    text-align: center  ;
+    color: #003349;
+  }
+
   .message-write{
    
-    border: solid 1px ;
+    border: solid 3px #003349;
+    text-align: center;
   }
 
   .message_item {
@@ -106,22 +122,63 @@
   }
   
   /* 연락처 영역 */
-  .call-list{
-    border: solid 1px;
+  .list{
+    color: #003349;
   }
 
+  .call-list{
+    text-align: center;
+    border: solid 3px #003349;
+    width: 200px;
+    height: 320px;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+    max-height: 320px;
+    
+   }
+
+   .call-list1{
+    text-align: center;
+    border: solid 3px #003349;
+    width: 200px;
+    height: 265px;
+    margin-bottom: 5px;
+   
+    
+   }
+
   .message_box {
-    flex: 1;
+    flex: 1;  
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
+     
   }
 
   
   /* 수신자 리스트 */
- .returncall{
-  border: solid 1px;
+  .call{
+    color: #003349;
+  }
+  .returncall{
+    text-align: center;
+    border: solid 3px #003349;
+    width: 200px;
+    height: 250px;
+    overflow-y: scroll;
+    max-height: 250px;
+     
  }
+
+ .returncall1{
+  text-align: center;
+  border: solid 3px #003349;
+  width: 200px;
+  height: 250px;
+
+   
+}
   
   .message_add_bt{
     background-color: #ffffff;
@@ -142,6 +199,10 @@
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
+  }
+
+  .message_send_bt{
+    display: none;
   }
 
 
