@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signUp } from "./MHSlice";
 import { useState } from "react";
+import heroLogo from './assets/img/logo1.png';    
 
 export default function SignUp() {
     const dispatch = useDispatch();
@@ -14,6 +15,9 @@ export default function SignUp() {
     return (
         <div className="signupWrap">
             <h1 className="logoH1">문자히어로!</h1>
+            <div className="logo_section">
+                <img src={heroLogo} alt="히어로 그림" onClick={() => navigate("/")} /> 
+            </div>
             <div className="signupDiv">
                 <form className="signupForm" onSubmit={(e) => {
                     e.preventDefault();

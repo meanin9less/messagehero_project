@@ -2,6 +2,7 @@ import "./assets/css/login.css";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "./MHSlice";
+import heroLogo from './assets/img/logo1.png';
 
 export default function Login() {
     const dispatch = useDispatch();
@@ -9,6 +10,9 @@ export default function Login() {
     return (
         <div className="loginWrap">
             <h1 className="logoH1">문자히어로!</h1>
+            <div className="logo_section">
+                <img src={heroLogo} alt="히어로 그림" onClick={() => navigate("/")} /> 
+            </div>
             <div className="loginDiv">
                 <form className="loginForm" onSubmit={(e) => {
                     e.preventDefault();

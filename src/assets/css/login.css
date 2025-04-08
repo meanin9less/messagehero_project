@@ -19,6 +19,8 @@
     color: #202124;
     margin-bottom: 20px;
     font-weight: 400;
+    /* 웹접근성위해서 아래같이 적용 */
+    display: none;
 }
 
 .loginDiv, .signupDiv {
@@ -156,4 +158,28 @@
     font-size: 12px;
     color: #888;
 }
+
+/* css 추가하는 부분 */
+
+
+.loginWrap .logo_section img {
+    width: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.loginWrap .logo_section img:hover {
+    transform: scale(1.05);
+}
+
+.signupWrap .logo_section img {
+    width: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.signupWrap .logo_section img:hover {
+    transform: scale(1.05);
+}
+
 
