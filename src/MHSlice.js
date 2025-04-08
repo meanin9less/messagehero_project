@@ -64,20 +64,8 @@ const MHSlice = createSlice({
     reducers: {
         ///////////////로그인 로그아웃 시작////////////////
         login: (state, actions) => {
-            const { inputId, inputPw } = actions.payload;
-            for (let i = 0; i < state.users.length; i++) {
-                if (state.users[i].userId === inputId) {
-                    if (state.users[i].password === inputPw) {
-                        state.currentUser = state.users[i];
-                        alert("로그인하였습니다.");
-                        return;
-                    }
-                    alert("비밀번호가 잘못되었습니다.");
-                    return;
-                }
-            }
-            alert("아이디가 잘못되었습니다.");
-            return;
+            const { inputId } = actions.payload;
+            state.currentUser = state.users.find(u=>u.userId === inputId);
         },
         logout: (state) => {
             const current = state.users.map(u => u.userId === state.currentUser.userId ? state.currentUser : u);

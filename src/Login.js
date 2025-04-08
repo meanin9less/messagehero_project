@@ -1,5 +1,5 @@
 import "./assets/css/login.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "./MHSlice";
 import heroLogo from './assets/img/logo1.png';
@@ -7,6 +7,7 @@ import heroLogo from './assets/img/logo1.png';
 export default function Login() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const users = useSelector(state=>state.MH.users);
     return (
         <div className="loginWrap">
             <h1 className="logoH1">문자히어로!</h1>
@@ -18,7 +19,16 @@ export default function Login() {
                     e.preventDefault();
                     const inputId = e.target.inputid.value;
                     const inputPw = e.target.inputpw.value;
-                    dispatch(login({ inputId, inputPw }));
+                    if(!(users.find(u=>u.userId === inputId))){
+                        alert("아이디가 잘못되었습니다.");
+                        return;
+                    }
+                    if(!(users.find(u=>u.password === inputPw))){
+                        alert("비밀번호가 잘못되었습니다.");
+                        return;
+                    }
+                    dispatch(login({ inputId }));
+                    alert("로그인 하였습니다.");
                     navigate("/");
                 }}>
                     <div className="formDiv">
