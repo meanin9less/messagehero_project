@@ -48,8 +48,9 @@ export default function UpdateContact() {
                     </div>
                     <button onClick={(e) => {
                         let count = 0;
-                        for (let i = 0; i < currentUser.contacts.length; i++) {
-                            if (currentUser.contacts[i].contact === contact) {
+                        const beforeUpdate = currentUser.contacts.filter(c=>c.contact !== currentContactNum);
+                        for (let i = 0; i < beforeUpdate.length; i++) {
+                            if (beforeUpdate[i].contact === contact) {
                                 count++;
                             }
                         }
