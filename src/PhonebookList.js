@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function PhonebookList() {
     const currentUser = useSelector(state => state.MH.currentUser);
     const contactList = currentUser ? currentUser.contacts : [];
     const [searchTerm, setSearchTerm] = useState("");
-
+    const navigate = useNavigate();
     const filteredList = searchTerm
         ? contactList.filter(c => c.name.includes(searchTerm))
         : contactList;
-
+    
     return (
         <>
             <div className="search-phone-num">
@@ -29,12 +29,14 @@ export default function PhonebookList() {
             <div className="contact-list">
                 <h4 className="title">연락처 목록</h4>
                 <ul>
-                    {currentUser ?  
-                        filteredList.length === 0 ? <p>연락처를 추가해주세요.</p> :
+                    {currentUser ? 
+                        contactList.length === 0 ? <p>연락처를 추가해주세요.</p> :
                         filteredList.map(c =>(
-                            <li key={c.contact} className="contact-item">
-                                <p>{c.name}</p>
-                                < Link className="contact-link" to={`${c.contact}`} >{c.name}</Link>
+                            <li onClick={()=>{
+                                navigate(`/Main/phonebook/${c.contact}`);
+                            }} key={c.contact} className="contact-item">
+                                <span>{c.name}</span>
+                                <span>{c.etc}</span>
                             </li>
                         )
                     ) : (

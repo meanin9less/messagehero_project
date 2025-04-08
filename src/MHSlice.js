@@ -76,7 +76,10 @@ const MHSlice = createSlice({
         },    
         signUp: (state,actions) =>{
         const { inputId, inputPw, inputName, inputNumber}= actions.payload;
-        state.users.push({userId: inputId, password: inputPw, name: inputName, contact: inputNumber, contacts:[]});
+        state.users.push({
+            ...state.users[0],
+            userId: inputId, password: inputPw, name: inputName, contact: inputNumber, contacts:[]
+        });
         },
         ////// 로그인 로그아웃 회원가입 끝//////
         ////// 연락처 검색, 추가, 수정, 삭제 시작////////
