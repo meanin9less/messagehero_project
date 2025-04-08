@@ -36,13 +36,13 @@ export default function Message() {
   return (
     <>
     {currentUser ? (
-      <div className="layout_container">
+      <div className="message_container">
         {/* 왼쪽 영역: 메시지 작성 + 서식 */}
-        <div className="layout_left">
-          <div className="editor_box">
+        <div className="message_left">
+          <div className="message_box">
             <h3>문자메세지</h3>
             <textarea
-              className="form_message_textarea"
+              className="message_textarea"
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               placeholder="메시지를 입력하세요"
@@ -51,13 +51,13 @@ export default function Message() {
   
           <div>
             <h3>서식</h3>
-            <div className="editor_box2">
+            <div className="message_box2">
               {currentStyle.length === 0 ? (
                 <p>서식이 없습니다.</p>
               ) : (
                 currentStyle.map((s) => (
                   <div
-                    className="list_template_item"
+                    className="message_item"
                     key={s.title}
                     onClick={() => setInputMessage(s.body)}
                   >
@@ -71,15 +71,15 @@ export default function Message() {
         </div>
   
         {/* 오른쪽 영역: 연락처 + 수신자 목록 */}
-        <div className="layout_right">
-          <div className="contact_box">
+        <div className="message_right">
+          <div className="message_box">
             <h3>연락처</h3>
             <ul>
               {contactList.map((c) => (
-                <li key={c.contact}>
+                <li key={c.contact} >
                   {c.name}
                   <button
-                    className="recipient_add_bt"
+                   className="message_add_bt"
                     onClick={() => {
                       if (!recipientList.some((r) => r.contact === c.contact)) {
                         setRecipientList([...recipientList, c]);
@@ -99,7 +99,7 @@ export default function Message() {
                   <li key={r.contact}>
                     {r.name}
                     <button
-                      className="action_remove_bt"
+                      className="message_remove_bt"
                       onClick={() =>
                         setRecipientList(
                           recipientList.filter((rec) => rec.contact !== r.contact)
@@ -115,19 +115,19 @@ export default function Message() {
               )}
             </ul>
   
-            <button className="action_send_bt" onClick={handleSend}>
+            <button className="message_add_bt" onClick={handleSend}>
               전송
             </button>
           </div>
         </div>
       </div>
     ) : (
-      <div className="layout_container">
-        <div className="layout_left">
-          <div className="editor_box">
+      <div className="message_container">
+        <div className="message_left">
+          <div className="message_box">
             <h3>문자메세지</h3>
             <textarea
-              className="form_message_textarea"
+              className="message_textarea"
               disabled
               placeholder="로그인 후 이용하세요."
             />
@@ -135,14 +135,14 @@ export default function Message() {
   
           <div>
             <h3>서식</h3>
-            <div className="editor_box2">
+            <div className="message_box2">
               <p>로그인 후 이용하세요.</p>
             </div>
           </div>
         </div>
   
-        <div className="layout_right">
-          <div className="contact_box">
+        <div className="message_right">
+          <div className="message_box">
             <h3>연락처</h3>
             <p>로그인 후 이용하세요.</p>
   
@@ -150,7 +150,7 @@ export default function Message() {
             <p>로그인 후 이용하세요.</p>
   
             <button
-              className="action_send_bt"
+              className="message_add_bt"
               onClick={() => alert("로그인 후 이용하세요.")}
             >
               전송
