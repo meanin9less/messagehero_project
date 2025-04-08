@@ -15,7 +15,7 @@ function Customize() {
       <header className="custom-header">내 스타일 만들기</header>
       <div className="custom-content">
         <div className="custom-box">
-          <Outlet></Outlet>
+          <Outlet context={{ currentUser }}></Outlet>
         </div>
 
         <div className="custom-box">
