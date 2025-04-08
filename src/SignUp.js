@@ -74,8 +74,8 @@ export default function SignUp() {
                     <button className="submitButton">회원가입</button>
                 </form>
             </div>
-            <div className="footer">
-                <p className="footerText">Copyright © MESSAGEHERO Corp. All Rights Reserved.</p>
+            <div className="footerText">
+                <p>Copyright © MESSAGEHERO Corp. All Rights Reserved.</p>
             </div>
         </div>
     );
