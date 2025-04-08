@@ -1,6 +1,6 @@
 
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "./MHSlice";
 import './assets/css/Header.css';
 import heroLogo from './assets/img/logo1.png';
@@ -8,7 +8,6 @@ import heroLogo from './assets/img/logo1.png';
 export default function Header() {
     const currentUser = useSelector(state=>state.MH.currentUser);
     const dispatch = useDispatch();
-    const link = document.createElement('link');
     const navigate=useNavigate();
     
     return (

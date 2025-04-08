@@ -10,48 +10,28 @@ const MHSlice = createSlice({
                     { name: "박시현", contact: "01012341231", etc: "프로젝트" },
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
-                ], userStyle: [
-                    { title: "새해인사1", body: "안녕하세요1" },
-                    { title: "새해인사2", body: "안녕하세요2" },
-                    { title: "새해인사3", body: "안녕하세요3" },
-                    { title: "새해인사4", body: "안녕하세요4" },
-                ]
+                ], userStyle: []
             },
             {
                 userId: "sihyun", password: "1234", name: "박시현", contact: "01012341232", contacts: [
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
-                ], userStyle: [
-                    { title: "새해인사1", body: "안녕하세요" },
-                    { title: "새해인사2", body: "안녕하세요" },
-                    { title: "새해인사3", body: "안녕하세요" },
-                    { title: "새해인사4", body: "안녕하세요" },
-                ]
+                ], userStyle: []
             },
             {
                 userId: "changhyun", password: "1234", name: "지창현", contact: "01012341233", contacts: [
                     { name: "박시현", contact: "01012341231", etc: "프로젝트" },
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
-                ], userStyle: [
-                    { title: "새해인사1", body: "안녕하세요" },
-                    { title: "새해인사2", body: "안녕하세요" },
-                    { title: "새해인사3", body: "안녕하세요" },
-                    { title: "새해인사4", body: "안녕하세요" },
-                ]
+                ], userStyle: []
             },
             {
                 userId: "saeryeong", password: "1234", name: "장세령", contact: "01012341234", contacts: [
                     { name: "박시현", contact: "01012341231", etc: "프로젝트" },
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
-                ], userStyle: [
-                    { title: "새해인사1", body: "안녕하세요" },
-                    { title: "새해인사2", body: "안녕하세요" },
-                    { title: "새해인사3", body: "안녕하세요" },
-                    { title: "새해인사4", body: "안녕하세요" },
-                ]
+                ], userStyle: []
             },
         ],
         currentUser: null,
@@ -59,6 +39,12 @@ const MHSlice = createSlice({
             { contact: "01012341231", fishingCount: 0, spamCount: 45 },
             { contact: "01012341232", fishingCount: 23, spamCount: 0 },
             { contact: "01012341233", fishingCount: 23, spamCount: 45 },
+        ],
+        basicStyle:[
+            { title: "새해인사1", body: "안녕하세요" },
+            { title: "새해인사2", body: "안녕하세요" },
+            { title: "새해인사3", body: "안녕하세요" },
+            { title: "생일인사", body: "이 세상에 태어나줘서 고마워^^ 내 손을 잡아줘서 고마워^^ 너와 함께 할수 있어서 행복해~♥" },
         ]
     },
     reducers: {

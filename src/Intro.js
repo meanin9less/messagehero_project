@@ -40,7 +40,7 @@ export default function Main() {
 
             <h1 className="visually_hidden">문자히어로</h1>
             <img
-                src={heroLogo2}
+                src={heroLogo2} alt=""
                 className="logo_main"
             />
 

@@ -26,7 +26,7 @@ export default function CustomRead(props) {
       setTitle("");
       setBody("");
     }
-  }, [styleTitle]); // 파라미터가 바뀔때
+  }, [currentStyle]);
 
   return (
     

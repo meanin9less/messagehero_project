@@ -6,10 +6,6 @@ function Customize() {
 
   const currentUser = useSelector(state=>state.MH.currentUser);
   const userStyle = currentUser ? currentUser.userStyle : [];
-    {currentUser ? 
-      userStyle.length === 0 ? <p>스타일을 추가해주세요.</p> :
-      userStyle.map(s=> <><li className="custom-list-item"><Link to={"/main/customize/update/"+s.title}>{s.title}</Link></li></>)
-      : <p>로그인 후 이용하세요.</p>}
   return (
     <div className="custom-container">
       <header className="custom-header">내 스타일 만들기</header>
