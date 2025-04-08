@@ -29,7 +29,20 @@
   }
 
 /* 메시지 입력 영역 */
+
+
   .message_box {
+    
+    flex: 1;
+    margin-bottom: 24px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+   
+  }
+  .message_phonebox{
     flex: 1;
     margin-bottom: 24px;
     padding: 10px;
@@ -44,6 +57,7 @@
     font-size: 16px;
     padding: 10px;
     box-sizing: border-box;
+   
   }
   
   .message_send_bt {
@@ -71,6 +85,11 @@
   }
   
   /* 서식 항목 스타일 */
+  .message-write{
+   
+    border: solid 1px ;
+  }
+
   .message_item {
     width: 150px;
     height: 100px;
@@ -87,6 +106,9 @@
   }
   
   /* 연락처 영역 */
+  .call-list{
+    border: solid 1px;
+  }
 
   .message_box {
     flex: 1;
@@ -97,6 +119,9 @@
 
   
   /* 수신자 리스트 */
+ .returncall{
+  border: solid 1px;
+ }
   
   .message_add_bt{
     background-color: #ffffff;
