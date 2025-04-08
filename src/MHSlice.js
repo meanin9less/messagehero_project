@@ -11,10 +11,10 @@ const MHSlice = createSlice({
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
                 ], userStyle: [
-                    { title: "새해인사1", body: "안녕하세요1" },
-                    { title: "새해인사2", body: "안녕하세요2" },
-                    { title: "새해인사3", body: "안녕하세요3" },
-                    { title: "새해인사4", body: "안녕하세요4" },
+                    { title: "새해인사1", body: "좋은 새해 되세요1" },
+                    { title: "새해인사2", body: "새해 복 많이 받으세요2" },
+                    { title: "추석인사3", body: "즐거운 한가위 되세요3" },
+                    { title: "추석인사4", body: "즐거운 추석되세요4" },
                 ]
             },
             {
@@ -23,10 +23,10 @@ const MHSlice = createSlice({
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
                 ], userStyle: [
-                    { title: "새해인사1", body: "안녕하세요" },
-                    { title: "새해인사2", body: "안녕하세요" },
-                    { title: "새해인사3", body: "안녕하세요" },
-                    { title: "새해인사4", body: "안녕하세요" },
+                    { title: "새해인사1", body: "좋은 새해 되세요1" },
+                    { title: "새해인사2", body: "새해 복 많이 받으세요2" },
+                    { title: "추석인사3", body: "즐거운 한가위 되세요3" },
+                    { title: "추석인사4", body: "즐거운 추석되세요4" },
                 ]
             },
             {
@@ -35,10 +35,10 @@ const MHSlice = createSlice({
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
                 ], userStyle: [
-                    { title: "새해인사1", body: "안녕하세요" },
-                    { title: "새해인사2", body: "안녕하세요" },
-                    { title: "새해인사3", body: "안녕하세요" },
-                    { title: "새해인사4", body: "안녕하세요" },
+                    { title: "새해인사1", body: "좋은 새해 되세요1" },
+                    { title: "새해인사2", body: "새해 복 많이 받으세요2" },
+                    { title: "추석인사3", body: "즐거운 한가위 되세요3" },
+                    { title: "추석인사4", body: "즐거운 추석되세요4" },
                 ]
             },
             {
@@ -47,10 +47,10 @@ const MHSlice = createSlice({
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
                 ], userStyle: [
-                    { title: "새해인사1", body: "안녕하세요" },
-                    { title: "새해인사2", body: "안녕하세요" },
-                    { title: "새해인사3", body: "안녕하세요" },
-                    { title: "새해인사4", body: "안녕하세요" },
+                    { title: "새해인사1", body: "좋은 새해 되세요1" },
+                    { title: "새해인사2", body: "새해 복 많이 받으세요2" },
+                    { title: "추석인사3", body: "즐거운 한가위 되세요3" },
+                    { title: "추석인사4", body: "즐거운 추석되세요4" },
                 ]
             },
         ],
