@@ -2,18 +2,25 @@
 import { useDispatch } from "react-redux";
 import { customAdd } from "./MHSlice";
 import "./assets/css/CustomAdd.css";
+import { useOutletContext } from "react-router-dom";
 
 export default function CustomAdd(props) {
   const dispatch = useDispatch();
-
+  const {currentUser}=useOutletContext();
+  console.log(currentUser);
   return (
       <>
       <h3>내 스타일 만들기</h3>
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          if(!currentUser){
+            alert("로그인 후 이용하시기 바랍니다.");
+            return;
+          }
           const title = e.target.title.value;
           const body = e.target.body.value;
+
           dispatch(customAdd({ title, body }));
         }}
       >

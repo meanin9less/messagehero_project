@@ -29,18 +29,16 @@ export default function PhonebookList() {
             <div className="contact-list">
                 <h4 className="title">연락처 목록</h4>
                 <ul>
-                    {currentUser ? 
-                        filteredList.length === 0 ? <p>로그인 후 이용해주세요 </p> : 
-                            (
-                                filteredList.map(c => (
-                                    <li key={c.contact} className="contact-item">
-                                        <p>{c.name}</p>
-                                        < Link className="contact-link" to={`${c.contact}`} >{c.name}</Link>
-                                    </li>
-                                ))
-                            ) : (
-                            <p>로그인 후 이용하세요.</p>
-                            )}
+                    {currentUser ? (
+                        filteredList.map(c => (
+                            <li key={c.contact} className="contact-item">
+                                <p>{c.name}</p>
+                                < Link className="contact-link" to={`${c.contact}`} >{c.name}</Link>
+                            </li>
+                        ))
+                    ) : (
+                        <p>로그인 후 이용하세요.</p>
+                    )}
                 </ul>
             </div>
         </>
