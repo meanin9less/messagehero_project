@@ -26,7 +26,7 @@ export default function CustomRead() {
       setTitle("");
       setBody("");
     }
-  }, [styleTitle, currentStyle]);
+  }, [styleTitle]); // 파라미터가 바뀔때
 
   return (
     
@@ -53,6 +53,11 @@ export default function CustomRead() {
           type="submit"
           onClick={(e) => {
             e.preventDefault();
+            const beforeUpdate = currentUser.userStyle.filter(s=>s.title !== styleTitle);
+            if(beforeUpdate.find(s=>s.title === title)){
+              alert("서식 이름이 중복되었습니다.");
+              return;
+            }
             dispatch(customUpdate({ styleTitle, title, body }));
             navigate("/main/customize");
           }}

@@ -6,7 +6,7 @@ const MHSlice = createSlice({
     initialState: {
         users: [
             {
-                userId: "hyun", password: "1234", name: "최현범", contact: "01086648729", contacts: [
+                userId: "hyun", password: "1234", name: "최현범", contact: "01012341231", contacts: [
                     { name: "박시현", contact: "01012341231", etc: "프로젝트" },
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
@@ -18,7 +18,7 @@ const MHSlice = createSlice({
                 ]
             },
             {
-                userId: "sihyun", password: "1234", name: "박시현", contact: "01012345678", contacts: [
+                userId: "sihyun", password: "1234", name: "박시현", contact: "01012341232", contacts: [
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
@@ -30,7 +30,7 @@ const MHSlice = createSlice({
                 ]
             },
             {
-                userId: "changhyun", password: "1234", name: "지창현", contact: "01012345678", contacts: [
+                userId: "changhyun", password: "1234", name: "지창현", contact: "01012341233", contacts: [
                     { name: "박시현", contact: "01012341231", etc: "프로젝트" },
                     { name: "장세령", contact: "01012341232", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
@@ -42,7 +42,7 @@ const MHSlice = createSlice({
                 ]
             },
             {
-                userId: "saeryeong", password: "1234", name: "장세령", contact: "01012345678", contacts: [
+                userId: "saeryeong", password: "1234", name: "장세령", contact: "01012341234", contacts: [
                     { name: "박시현", contact: "01012341231", etc: "프로젝트" },
                     { name: "지창현", contact: "01012341233", etc: "프로젝트" },
                     { name: "최현범", contact: "01012341234", etc: "프로젝트" },
@@ -80,7 +80,10 @@ const MHSlice = createSlice({
             return;
         },
         logout: (state) => {
-            state.users.map(u => u.userId === state.currentUser.userId ? state.currentUser : u);
+            const current = state.users.map(u => u.userId === state.currentUser.userId ? state.currentUser : u);
+            state.users = [
+                ...current
+            ];
             state.currentUser = null;
         },    
         signUp: (state,actions) =>{
