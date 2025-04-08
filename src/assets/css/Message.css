@@ -53,6 +53,11 @@
   
   .message_box2 {
     border: 1px solid #ddd;
+    height: 150px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow-X: scroll;
+    overflow-y: hidden;
     padding: 16px;
     margin-top: 16px; 
     border-radius: 8px;
@@ -61,8 +66,13 @@
   
   /* 서식 항목 스타일 */
   .message_item {
+    width: 150px;
+    height: 100px;
+    display: inline-block;
     padding: 8px;
+    
     border: 1px solid #ccc;
+    margin-right: 5px;
     margin-bottom: 8px;
     border-radius: 4px;
     cursor: pointer;
