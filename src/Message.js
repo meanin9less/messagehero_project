@@ -35,6 +35,7 @@ export default function Message() {
 
   return (
     <>
+    <div class="main-messge">
     {currentUser ? (
       <div className="message_container">
         {/* 왼쪽 영역: 메시지 작성 + 서식 */}
@@ -74,6 +75,7 @@ export default function Message() {
         <div className="message_right">
           <div className="message_box">
             <h3>연락처</h3>
+            <div class="callcheckedlist">
             <ul>
               {contactList.map((c) => (
                 <li key={c.contact} >
@@ -91,8 +93,10 @@ export default function Message() {
                 </li>
               ))}
             </ul>
-  
+            </div>
+              
             <h3>수신자 목록</h3>
+            <div class="callcheckedlist">
             <ul>
               {recipientList.length > 0 ? (
                 recipientList.map((r) => (
@@ -114,6 +118,7 @@ export default function Message() {
                 <p>수신자 없음</p>
               )}
             </ul>
+            </div>
   
             <button className="message_send_bt" onClick={handleSend}>
               전송
@@ -159,6 +164,7 @@ export default function Message() {
         </div>
       </div>
     )}
+    </div>
   </>
   
   );

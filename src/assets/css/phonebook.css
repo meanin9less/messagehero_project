@@ -50,6 +50,7 @@
 .contact-list {
     margin-top: 20px; /* 목록 상단 여백 */
     margin-left: 75px;
+   
 }
 
 .contact-list h4 {
@@ -60,13 +61,16 @@
     color: #003349; /* 텍스트 색상 */
 }
 
-.contact-list ul {
     
+
+.contact-list ul {
+  
+    height: 300px;
     list-style-type: none; /* 기본 불릿 포인트 제거 */
     padding: 0; /* 패딩 제거 */
     overflow-y: scroll;/* 스크롤*/
     width: 500px; /* 넓이*/
-    max-height: 300px;/* 최대 길이*/
+    max-height: 400px;/* 최대 길이*/
 }
 
 .contact-item {
@@ -88,6 +92,10 @@
 
 .contact-link:hover {
     text-decoration: underline; /* 링크에 마우스를 올리면 밑줄 추가 */
+}
+
+.uselogin{
+    text-align: center  ;
 }
 
 /* =========================
