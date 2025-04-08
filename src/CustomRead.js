@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { customDelete, customUpdate } from "./MHSlice";
 import './assets/css/CustomRead.css'; 
 
-export default function CustomRead(props) {
+export default function CustomRead() {
   const { styleTitle } = useParams();
   const currentUser = useSelector(state => state.MH.currentUser);
   const dispatch = useDispatch();
@@ -31,7 +31,7 @@ export default function CustomRead(props) {
   return (
     
     <form className="custom-form">
-      <h3>내 스타일 만들기</h3>
+      <h3>내 스타일 수정</h3>
       <input
         className="custom-input"
         name="title"

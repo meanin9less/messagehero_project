@@ -39,9 +39,7 @@ export default function Blacklist() {
                     </div >
                 
                         <Outlet></Outlet>
-                   
-               
-                    <div class="five">
+                    <div className="five">
                         <strong className="prevention-title">보이스 피싱 예방 5계명</strong>
                         <ul className="prevention-list">
                             <li>경찰, 금감원이라며 금전을 요구하면 무조건 거절</li>

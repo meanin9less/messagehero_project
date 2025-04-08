@@ -34,7 +34,7 @@ export default function SignUp() {
                         return;
                     }
                     dispatch(signUp({ inputId, inputPw, inputName, inputNumber }));
-                    navigate("/");
+                    navigate("/login");
                 }}>
                     <div className="formDiv">
                         <div>

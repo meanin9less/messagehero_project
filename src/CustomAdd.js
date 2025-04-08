@@ -7,7 +7,6 @@ import { useOutletContext } from "react-router-dom";
 export default function CustomAdd(props) {
   const dispatch = useDispatch();
   const {currentUser}=useOutletContext();
-  console.log(currentUser);
   return (
       <>
       <h3>내 스타일 만들기</h3>

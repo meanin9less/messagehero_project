@@ -35,16 +35,16 @@ export default function UpdateContact() {
             {currentUser ? (
                 <form onSubmit={(e) => e.preventDefault()}>
                     <div className="input-group">
-                        <label>이름</label>
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                        <label for="name">이름</label>
+                        <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
                     </div>
                     <div className="input-group">
-                        <label>전화번호</label>
-                        <input type="text" value={contact} onChange={(e) => setContact(e.target.value.replace(/[^0-9]/g, ""))} />
+                        <label for="contact">전화번호</label>
+                        <input type="text" id="contact" value={contact} onChange={(e) => setContact(e.target.value.replace(/[^0-9]/g, ""))} />
                     </div>
                     <div className="input-group">
-                        <label>기타</label>
-                        <input type="text" value={etc} onChange={(e) => setEtc(e.target.value)} />
+                        <label for="etc">정보</label>
+                        <input type="text" id="etc" value={etc} onChange={(e) => setEtc(e.target.value)} />
                     </div>
                     <button class="button1"  onClick={(e) => {
                         let count = 0;
@@ -69,16 +69,16 @@ export default function UpdateContact() {
             ) : (
                 <form>
                     <div className="input-group">
-                        <label>이름</label>
-                        <input type="text" />
+                        <label for="name">이름</label>
+                        <input type="text" id="name" placeholder="로그인 후 이용하세요."  />
                     </div>
                     <div className="input-group">
-                        <label>전화번호</label>
-                        <input type="text" />
+                        <label for="contact">전화번호</label>
+                        <input type="text" id="contact" placeholder="로그인 후 이용하세요."  />
                     </div>
                     <div className="input-group">
-                        <label>기타</label>
-                        <input type="text" />
+                        <label for="etc">정보</label>
+                        <input type="text" id="etc" placeholder="로그인 후 이용하세요."  />
                     </div>
                     <button class="button" onClick={() => alert("로그인 후 이용하세요.")}>수정</button>
                     <button class="button" onClick={() => alert("로그인 후 이용하세요.")}>삭제</button>

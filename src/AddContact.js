@@ -30,22 +30,24 @@ export default function AddContact() {
                 dispatch(addContact(contact));
             }}>
                 <div className="input-group">
-                    <label>이름</label>
-                    <input type="text" name="name" required />
+                    <label for="name">이름</label>
+                    <input type="text" name="name" id="name" placeholder={currentUser ? "이름을 입력하세요." : "로그인 후 이용하세요."} required />
                 </div>
                 <div className="input-group">
-                    <label>전화번호</label>
+                    <label for="pw">전화번호</label>
                     <input 
                         type="text" 
                         name="contact" 
+                        id="pw"
+                        placeholder={currentUser ? "번호를 입력하세요." : "로그인 후 이용하세요."}
                         value={inputContact} 
                         onChange={(e) => setInputContact(e.target.value.replace(/[^0-9]/g, ""))} 
                         required
                     />
                 </div>
                 <div className="input-group">
-                    <label>기타</label>
-                    <input type="text" name="etc" />
+                    <label for="etc">정보</label>
+                    <input type="text" name="etc" id="etc" placeholder={currentUser ? "추가 정보를 입력하세요." : "로그인 후 이용하세요."} />
                 </div>
                 <button class="button" type="submit">추가</button>
             </form>

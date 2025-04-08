@@ -36,7 +36,13 @@ export default function PhonebookList() {
                                 navigate(`/Main/phonebook/${c.contact}`);
                             }} key={c.contact} className="contact-item">
                                 <span class="list-name">{c.name}</span>
-                                <span class="list-etc">-{c.etc}</span>
+                                <span class="list-contact">{c.contact.length < 8 ? c.contact : 
+                                                        c.contact.length === 8 ? c.contact.replace(/(\d{4})(\d{4})/, "$1-$2") : 
+                                                        c.contact.length === 9 ? c.contact.replace(/(\d{2})(\d{3})(\d{4})/, "$1-$2-$3") : 
+                                                        c.contact.length === 10 && c.contact.startsWith("02") ? c.contact.replace(/(\d{2})(\d{4})(\d{4})/, "$1-$2-$3") :
+                                                        c.contact.length === 10 ? c.contact.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3") :
+                                                        c.contact.length === 11 ? c.contact.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3") : c.contact}</span>
+                                <span class="list-etc">{c.etc === "" ? "" : `${c.etc}`}</span>
                             </li>
                         )
                     ) : (

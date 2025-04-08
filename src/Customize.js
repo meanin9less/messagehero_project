@@ -8,7 +8,7 @@ function Customize() {
   const userStyle = currentUser ? currentUser.userStyle : [];
   return (
     <div className="custom-container">
-      <header className="custom-header">내 스타일 만들기</header>
+      <header className="custom-header">내 스타일</header>
       <div className="custom-content">
         <div className="custom-box">
           <Outlet context={{ currentUser }}></Outlet>
