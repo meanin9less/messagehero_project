@@ -5,9 +5,10 @@ import { useState } from "react";
 export default function AddContact() {
     const currentUser = useSelector(state => state.MH.currentUser);
     const dispatch = useDispatch();
-    const [inputContact, setInputContact] = useState();
+    const [inputContact, setInputContact] = useState("");
+
     return (
-        <div>
+        <div className="add-contact">
             <h4>연락처 추가</h4>
             <form onSubmit={(e) => {
                 e.preventDefault();
@@ -28,23 +29,31 @@ export default function AddContact() {
                 const contact = { name: inputName, contact: inputContact, etc: inputEtc };
                 dispatch(addContact(contact));
             }}>
-                <div>
+                <div className="input-group">
                     <label>이름</label>
-                    <input type="text" name="name"></input>
+                    <input type="text" name="name" required />
                 </div>
-                <div>
+                <div className="input-group">
                     <label>전화번호</label>
-                    <input type="text" name="contact" value={inputContact} onChange={(e)=>{
-                        setInputContact(e.target.value.replace(/[^0-9]/g, ""));
-                    }}></input>
+                    <input 
+                        type="text" 
+                        name="contact" 
+                        value={inputContact} 
+                        onChange={(e) => setInputContact(e.target.value.replace(/[^0-9]/g, ""))} 
+                        required
+                    />
                 </div>
-                <div>
+                <div className="input-group">
                     <label>기타</label>
-                    <input type="text" name="etc"></input>
+                    <input type="text" name="etc" />
                 </div>
                 <button type="submit">추가</button>
             </form>
         </div>
-    )
+    );
 }
+
+
+
+
 
