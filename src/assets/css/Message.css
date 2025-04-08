@@ -53,6 +53,11 @@
   
   .message_box2 {
     border: 1px solid #ddd;
+    height: 150px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow-X: scroll;
+    overflow-y: hidden;
     padding: 16px;
     margin-top: 16px; 
     border-radius: 8px;
@@ -61,8 +66,13 @@
   
   /* 서식 항목 스타일 */
   .message_item {
+    width: 150px;
+    height: 100px;
+    display: inline-block;
     padding: 8px;
+    
     border: 1px solid #ccc;
+    margin-right: 5px;
     margin-bottom: 8px;
     border-radius: 4px;
     cursor: pointer;
@@ -85,6 +95,7 @@
   .message_add_bt{
     background-color: #ffffff;
     color: #000000;
+    margin-left: 5px;
     padding: 2px 4px;
     font-size: 14px;
     cursor: pointer;
@@ -95,6 +106,7 @@
     background-color: #ffffff;
     color: #ff0000;
     border: 1px solid;
+    margin-left: 5px;
     padding: 2px 4px;
     font-size: 14px;
     cursor: pointer;
