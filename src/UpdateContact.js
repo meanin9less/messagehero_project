@@ -46,7 +46,7 @@ export default function UpdateContact() {
                         <label>기타</label>
                         <input type="text" value={etc} onChange={(e) => setEtc(e.target.value)} />
                     </div>
-                    <button onClick={(e) => {
+                    <button class="button1"  onClick={(e) => {
                         let count = 0;
                         const beforeUpdate = currentUser.contacts.filter(c=>c.contact !== currentContactNum);
                         for (let i = 0; i < beforeUpdate.length; i++) {
@@ -61,7 +61,7 @@ export default function UpdateContact() {
                         dispatch(updateContact({ currentContactNum, name, contact, etc }));
                         navigate("/main/phonebook");
                     }}>수정</button>
-                    <button onClick={(e) => {
+                    <button class="button1"  onClick={(e) => {
                         dispatch(deleteContact(currentContactNum));
                         navigate("/main/phonebook");
                     }}>삭제</button>
