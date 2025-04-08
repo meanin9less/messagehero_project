@@ -4,12 +4,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  /* 화면의 세로 길이 전체를 사용 */
-    margin-top: 60px;
     margin-bottom: 50px;
-}
+ }
 
 .blacklist {
+    
     width: 100%;
     max-width: 1000px; /* 최대 너비 설정 */
     padding: 30px;
