@@ -1,5 +1,5 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
-import "./assets/css/Message1.css";
+import "./assets/css/Message.css";
 export default function MessageMyStyle() {
 const { setInputMessage, currentUser } = useOutletContext();
 const currentStyle = currentUser ? currentUser.userStyle : [];

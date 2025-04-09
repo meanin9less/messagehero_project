@@ -13,7 +13,7 @@ import BlackListSearchResult from './BlackListSearchResult';
 import BlackListReport from './BlackListReport';
 import Main from './Main';
 import SignUp from './SignUp';
-import Message1 from './Message1';
+import Message from './Message';
 import MessageBasicStyle from './MessageBasicStyle';
 import MessageMyStyle from './MessageMyStyle';
 
@@ -32,7 +32,7 @@ function App() {
           <Route path='/main/phonebook/:currentContactNum' element={<UpdateContact></UpdateContact>}></Route>
         </Route>
 
-        <Route path='/main/message' element={<Message1></Message1>}>
+        <Route path='/main/message' element={<Message></Message>}>
           <Route index element={<MessageBasicStyle></MessageBasicStyle>}></Route>
           <Route path="/main/message/MessageMyStyle" element={<MessageMyStyle></MessageMyStyle>}></Route>          
         </Route>

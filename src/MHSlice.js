@@ -35,9 +35,9 @@ const MHSlice = createSlice({
         ],
         currentUser: null,
         blackList: [
-            { contact: "01012341231", fishingCount: 0, spamCount: 45 },
-            { contact: "01012341232", fishingCount: 23, spamCount: 0 },
-            { contact: "01012341233", fishingCount: 23, spamCount: 45 },
+            { contact: "01099999999", fishingCount: 0, spamCount: 45 },
+            { contact: "022222222", fishingCount: 23, spamCount: 0 },
+            { contact: "07088888888", fishingCount: 23, spamCount: 45 },
         ],
         basicStyle:[
             { title: "새해인사", body: "지난 한 해 보내주신 성원에 깊이 감사드리며, 희망찬 새해를 맞아 가정에 행복과 사랑이 충만하시기를 기원합니다." },

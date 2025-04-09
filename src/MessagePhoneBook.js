@@ -1,4 +1,4 @@
-import "./assets/css/Message1.css";
+import "./assets/css/Message.css";
 
 export default function MessagePhoneBook({ props }) {
 const { contactList, recipientList, setRecipientList, handleSend, currentUser } = props;
