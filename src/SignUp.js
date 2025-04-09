@@ -25,6 +25,23 @@ export default function SignUp() {
                     const inputPw = e.target.inputPw.value;
                     const inputName = e.target.inputName.value;
                     setInputNumber(e.target.inputNumber.value);
+                    if(inputId.length<5){
+                        alert("아이디는 네자 이상 입력하세요.")
+                        return;
+                    }
+                    if(inputPw.length<5){
+                        alert("비밀번호는 네자 이상 입력하세요.")
+                        return;
+                    }
+                    if(inputName===""){
+                        alert("이름은 공란일 수 없습니다.")
+                        return;
+                    }
+                    if(inputNumber===""){
+                        alert("전화번호는 공란일 수 없습니다.")
+                        return;
+                    }
+
                     if (users.find(u => u.userId === inputId)) {
                         alert("중복된 아이디입니다.");
                         return;
