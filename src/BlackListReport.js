@@ -51,11 +51,7 @@ export default function BlackListReport() {
                     <span className="report-type-title">신고 유형</span>
                     <div className="checkbox-group">
                         <label className="checkbox-label">
-                            <input 
-                                className="checkbox-input"
-                                type="checkbox" 
-                                checked={fishing} 
-                                onChange={(e) => setFishing(e.target.checked)} 
+                            <input className="checkbox-input" type="checkbox" checked={fishing} onChange={(e) => setFishing(e.target.checked ? 1 : 0)} 
                             />
                             보이스 피싱
                         </label>
@@ -64,7 +60,7 @@ export default function BlackListReport() {
                                 className="checkbox-input"
                                 type="checkbox" 
                                 checked={spam} 
-                                onChange={(e) => setSpam(e.target.checked)} 
+                                onChange={(e) => setSpam(e.target.checked ? 1 : 0)} 
                             />
                             스팸 및 광고성
                         </label>

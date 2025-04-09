@@ -14,16 +14,9 @@ export default function PhonebookList() {
     return (
         <>
             <div className="search-phone-num">
-                {currentUser ? (
-                    <input
-                        type="text"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        placeholder="연락처 검색"
-                    />
-                ) : (
-                    <input type="text" placeholder="로그인 후 이용하세요." disabled />
-                )}
+                {currentUser ? 
+                    <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="연락처 검색"/> : 
+                    <input type="text" placeholder="로그인 후 이용하세요." disabled />}
             </div>
 
             <div className="contact-list">

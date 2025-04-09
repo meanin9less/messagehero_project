@@ -12,6 +12,8 @@ export default function BlackListSearchResult(){
             searchResult.contact.length === 10 && searchResult.contact.startsWith("02") ? searchResult.contact.replace(/(\d{2})(\d{4})(\d{4})/, "$1-$2-$3") :
             searchResult.contact.length === 10 ? searchResult.contact.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3") :
             searchResult.contact.length === 11 ? searchResult.contact.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3") : searchResult.contact}는 신고이력이 있는 번호입니다.</p>
+        
+        
         <p>{searchResult.fishingCount > 0 ? `보이스피싱 ${searchResult.fishingCount}회,` : "" }</p>
         <p>{searchResult.spamCount > 0 ? `스팸 및 광고성 ${searchResult.spamCount}회` : "" }</p></>
         : <p>{
